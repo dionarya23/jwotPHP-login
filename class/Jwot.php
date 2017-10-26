@@ -7,7 +7,7 @@ class Jwot{
     return JWT::encode($datas, $key);
   }
 
-  public function decoded($hash = [], $key){
+  public function decoded($hash, $key){
     $decoded = JWT::decode($hash, $key, array('HS256'));
     $decoded_array = (array) $decoded;
     return $decoded_array;
